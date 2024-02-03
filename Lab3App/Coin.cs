@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,15 +19,16 @@ namespace Lab3App
         private void UpdateTotalValue()
         {
             CollectionBoard.TotalValue = CollectionBoard.TotalValue + Value;
+            Console.WriteLine($"Total Value is updated to: {CollectionBoard.TotalValue}");
         }
         public override void Display()
         {
             Console.Write($"Coin {Description} is displayed\n");
         }
-        public override void AddMe(List<Collectable> list)
+        public override void AddMe(List<Collectable> list) 
         {
-            UpdateTotalValue();
             base.AddMe(list);
+            UpdateTotalValue();
         }
     }
 }
