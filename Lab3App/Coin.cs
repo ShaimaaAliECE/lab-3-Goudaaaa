@@ -8,17 +8,17 @@ namespace Lab3App
 {
     internal class Coin : Treasure
     {
-        private int value;
+        private int Value;
 
         public Coin(string name, int score = 0, int value = 0) : base(name, score, value)
         {
             Description = name;
-            this.value = value;
+            this.Value = value;
         }
 
         private void UpdateTotalValue()
         {
-            CollectionBoard.TotalValue = CollectionBoard.TotalValue + value;
+            CollectionBoard.TotalValue = CollectionBoard.TotalValue + Value;
         }
         public override void Display()
         {
