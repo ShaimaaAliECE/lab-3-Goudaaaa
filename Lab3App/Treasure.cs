@@ -8,17 +8,17 @@ namespace Lab3App
 {
     internal abstract class Treasure : Collectable
     {
-        private int score;
+        private int Score;
 
         public Treasure(String name, int score = 0, int value = 0) : base(name, score, value)
         {
             Description = name;
-            this.score = score;
+            this.Score = score;
         }
 
         private void UpdateTotalScore()
         {
-            CollectionBoard.TotalScore = CollectionBoard.TotalScore + score;
+            CollectionBoard.TotalScore = CollectionBoard.TotalScore + Score;
             Console.WriteLine($"Total Score is updated to: {CollectionBoard.TotalScore}");
         }
         public override void AddMe(List<Collectable> list)
